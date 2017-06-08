@@ -27,10 +27,10 @@ type Atom struct {
 	ResSeq     int
 	ICode      string
 	X, Y, Z    float64
-	Occupancy  float64
-	TempFactor float64
-	Element    string
-	Charge     string
+	//Occupancy  float64
+	//TempFactor float64
+	//Element    string
+	//Charge     string
 }
 
 func ParseAtom(line string) *Atom {
@@ -42,12 +42,12 @@ func ParseAtom(line string) *Atom {
 	atom.ChainID = parseString(line[21:22])
 	atom.ResSeq = parseInt(line[22:26])
 	atom.ICode = parseString(line[26:27])
-	atom.Element = parseString(line[76:78])
+	//atom.Element = parseString(line[76:78])
 	atom.X = parseFloat(line[30:38])
 	atom.Y = parseFloat(line[38:46])
 	atom.Z = parseFloat(line[46:54])
-	atom.Occupancy = parseFloat(line[54:60])
-	atom.TempFactor = parseFloat(line[60:66])
-	atom.Charge = parseString(line[78:80])
+	//atom.Occupancy = parseFloat(line[54:60])
+	//atom.TempFactor = parseFloat(line[60:66])
+	//atom.Charge = parseString(line[78:80])
 	return &atom
 }
